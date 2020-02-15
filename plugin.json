@@ -1,0 +1,12 @@
+{
+    "ID": "F40FE58EC10B46FDB0BE885B62C3AC1A",
+    "ActionKeyword": "sj",
+    "Name": "随手记",
+    "Description": "随手记录到markdown文件中，支持多文件。",
+    "Author": "zhangyd",
+    "Version": "1.0.0",
+    "Language": "csharp",
+    "Website": "http://www.getwox.com",
+    "IcoPath": "Images\\AppIcon.png",
+    "ExecuteFileName": "Wox.Plugin.SSJ.dll"
+}
