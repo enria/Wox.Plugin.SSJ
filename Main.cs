@@ -32,14 +32,24 @@ namespace Tip {
             if (_setting.DocRoot == null || _setting.DocRoot.Trim().Length == 0) {
                 results.Add(new Result() {
                     Title = "请先设置文档目录，再使用插件",
-                    IcoPath = "Images\\error.png"
+                    SubTitle="点击进入设置界面",
+                    IcoPath = "Images\\error.png",
+                    Action = e => {
+                        _context.API.OpenSettingDialog();
+                        return true;
+                    }
                 });
                 return results;
             }
             if (!Directory.Exists(_setting.DocRoot)) {
                 results.Add(new Result() {
                     Title = "文档目录不存在",
-                    IcoPath = "Images\\error.png"
+                    SubTitle = "点击设置文档目录",
+                    IcoPath = "Images\\error.png",
+                    Action = e => {
+                        _context.API.OpenSettingDialog();
+                        return true;
+                    }
                 });
                 return results;
             }
